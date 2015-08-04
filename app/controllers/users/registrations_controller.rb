@@ -8,7 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         if resource.plan_id == 2
           resource.save_with_payment
         else
-          render :new
+          resource.save
         end
       end
     end
